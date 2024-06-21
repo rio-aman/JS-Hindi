@@ -20,7 +20,9 @@ const anotherId = Symbol('123')
 console.log(id === anotherId);
 
 // const bigNumber = 347859203
-const BigNumber = 347859203n
+const BigNumber = 347859203n 
+// if we write n at last in any no then it becomes bigint
+
 let bigNumber ; 
 
 console.log(typeof bigNumber)
@@ -40,4 +42,5 @@ const myFunction = function(){
 }
 
 console.log(typeof anotherId);
+console.log(typeof myFunction);
 
