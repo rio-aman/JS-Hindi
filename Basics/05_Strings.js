@@ -44,7 +44,7 @@ const contentString = "Hello, world";
 console.log(contentString.blink());
 console.log(contentString.anchor()); // to make string anchor like html wala <a></a> ye wale jaisa   
 console.log(contentString.at(-10)); //at() to show the number in any place 
-
+console.log(contentString.big());
 
 
 
