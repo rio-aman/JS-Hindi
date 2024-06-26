@@ -1,10 +1,10 @@
 const marvel_heroes = ["thor","ironman"]
 const dc_heroes = ["flash","superman"]
 
-// marvel_heroes.push(dc_heroes)
-// console.log(marvel_heroes)
-// a=marvel_heroes.concat(dc_heroes)
-// console.log(a)
+marvel_heroes.push(dc_heroes)
+console.log(marvel_heroes)
+a=marvel_heroes.concat(dc_heroes)
+console.log(a)
 
 const all_new_heroes = [...marvel_heroes, ...dc_heroes]
 console.log(all_new_heroes)
