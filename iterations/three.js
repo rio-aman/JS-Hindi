@@ -44,4 +44,11 @@ const myObject = {
     
 // }
 
-objects can't 
+// objects can't iterateable by forof loop
+
+// for (const key in object) {
+//     if (Object.hasOwnProperty.call(object, key)) {
+//         const element = object[key];
+        
+//     }
+// }
