@@ -7,7 +7,7 @@ const myNums = [1, 2, 3]
 
 const myTotal = myNums.reduce( (acc, curr) => acc+curr, 0)
 
-console.log(myTotal);
+// console.log(myTotal);
 
 
 const shoppingCart = [
@@ -31,4 +31,28 @@ const shoppingCart = [
 
 const priceToPay = shoppingCart.reduce((acc, item) => acc + item.price, 0)
 
-console.log(priceToPay); 
+// console.log(priceToPay); 
+
+
+const gameamount = [
+    {
+        game1 : "NFS",
+        price : 1499
+    },
+    {
+        game2 : "COD",
+        price : 599
+    },
+    {
+        game3 : "GOD2",
+        price : 299
+    },
+    {
+        game4 : "NFS CARBON",
+        price : 1699
+    }
+]
+
+const gametotal = gameamount.reduce((acc,total)=> acc+total.price,0)
+
+console.log(gametotal)
