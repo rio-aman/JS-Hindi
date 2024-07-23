@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom learning</title>
+</head>
+<body style="background-color: #12131393;color: rgb(248, 247, 250);">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addlanguage(langName){
+        const li  = document.createElement('li')
+        li.innerHTML = `${langName}` //due to innerHTML there is traversing happening that's why below approach is optimised bcz there is not happening there
+        document.querySelector('.language').appendChild(li)
+    }
+    addlanguage("python")
+    addlanguage("TYPESCRIPT") //by this every time the tree traverse when the function runs 
+// optimise approach
+
+function addoptlanguage(langName){
+    const li = document.createElement('li');
+
+    // below can be done like this 
+    // const addtext = document.createTextNode(langName)
+    // li.appendChild(addtext)
+
+    li.appendChild(document.createTextNode(langName))
+    document.querySelector('.language').appendChild(li)
+}
+addoptlanguage("rust")
+
+// EDIT
+
+const secondlang = document.querySelector('li:nth-child(2)') //nth-child() css concept
+// secondlang.innerHTML = "Gojo"
+
+// console.log(secondlang)
+
+// second approach
+
+const newli = document.createElement('li')
+newli.textContent = "GOJO"
+secondlang.replaceWith(newli)
+
+//edit
+const firstLang = document.querySelector("li:first-child")
+firstLang.outerHTML = '<li>RUBY</li>'
+
+//remove
+const lastLang = document.querySelector('li:last-child')
+lastLang.remove()
+
+</script>
+</html>
