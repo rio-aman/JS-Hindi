@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM LEARNING</title>
+</head>
+<body style="background-color: rgb(255, 251, 127); color: #fa0303;">
+    
+</body>
+<script>   //why this is not we seeing because div is present in memeory right now and we didn't attached it yet with document 
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'main'
+    div.id = Math.round(Math.random()*10+1)
+    div.setAttribute("title" , "generated title")
+    div.style.backgroundColor = "grey"
+    div.style.padding = '12px'
+    // div.innerText = "Bendy and the ink machine"  // it over right the already present text 
+    const addtext = document.createTextNode("Bendy and the ink machine")
+    div.appendChild(addtext)
+
+
+    // for attaching 
+    document.body.appendChild(addtext)
+
+// by function 
+
+    // function msg (message) {
+    //     const m = message // this is important to store the message into something to display 
+    //     const div = document.createElement('div')
+    //     console.log(div);
+    //     div.className = 'main'
+    //     div.id = Math.round(Math.random()*10+1)
+    //     div.setAttribute("title" , "generated title")
+    //     div.style.backgroundColor = "yellow"
+    //     div.style.padding = '16px'
+    //     // div.innerText = "Bendy and the ink machine"  // it over right the already present text 
+    //     const addtext = document.createTextNode(m)
+    //     div.appendChild(addtext)
+
+
+    // // for attaching 
+    // document.body.appendChild(addtext)
+        
+    // }
+    // msg("Bendy machine")
+</script>
+</html>
