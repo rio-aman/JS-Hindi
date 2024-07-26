@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CHAI AUR CODE</h1>
+    <button id="stop">STOP</button>
+</body>
+<script>
+    // setTimeout(function () {
+    //     console.log("Aman");
+    // },2000) //it is method and also call api 
+
+    const Aman = function () {
+        console.log("Aman");
+    }
+    setTimeout(Aman,2000) // if i write this Aman() the it will execute 
+    const changeText = function() {
+        document.querySelector('h1').innerHTML = "best js series";
+    }
+    const changeMe = setTimeout(changeText,4000); // by writing it in variable it doesn't mean that it is not executing 
+// here both happening timeout setting and clearing due to this nothing chai aur code will change 
+    // clearTimeout(changeMe)
+
+    document.querySelector('#stop').addEventListener('click',function () {
+        clearTimeout(changeMe)
+        console.log("Stopped");
+    })
+</script>
+</html>
