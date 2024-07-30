@@ -30,7 +30,7 @@ function User(username, loginCount, isLoggedIn){
     this.isLoggedIn = isLoggedIn
 
     this.greeting = function(){
-        // console.log(`Welcome ${this.username}`);
+        console.log(`Welcome ${this.username}`);
 
     }
 
@@ -40,7 +40,8 @@ function User(username, loginCount, isLoggedIn){
 // if we don't use new keyword then in merory we declared the useOne now if we declare the userTwo then it over write the values of userOne in memory with it's own values
 const userOne = new User("hitesh", 12, true)
 const userTwo = new User("ChaiAurCode", 11, false)
-console.log(userOne);
+// console.log(userOne);
+console.log(userOne.constructor);
 //console.log(userTwo);
 
 
